@@ -7,7 +7,7 @@ import psycopg2
 
 load_dotenv()
 
-WeatherAPI = os.getenv('OPEN_API_KEY')
+WeatherAPI = os.getenv('WEATHER_API_KEY')
 DBPASSWORD = os.getenv('DATABASE_PASSWORD')
 
 print(f'{WeatherAPI}')

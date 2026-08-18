@@ -27,4 +27,4 @@ jobs:
         env:
           DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-        run: python weather_pipeline.py
+        run: pytho get_weather.py

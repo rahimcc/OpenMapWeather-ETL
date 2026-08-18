@@ -8,7 +8,7 @@ on:
 jobs:
   run-etl:
     runs-on: ubuntu-latest
-    environment: Production
+    environment: Production 
 
     steps:
       - name: Checkout repo
@@ -24,7 +24,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run ETL script
-        env
+        env:
           DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
         run: python weather_pipeline.py

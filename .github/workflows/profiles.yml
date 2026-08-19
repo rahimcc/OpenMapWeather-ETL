@@ -1,0 +1,52 @@
+name: dbt CI
+
+on:
+  workflow_run:
+    workflows: ["weather_etl"] # Exact name of the other workflow
+    types:
+      - completed 
+    branches: [main]
+
+jobs:
+  dbt-run:
+    runs-on: ubuntu-latest
+    env:
+      DBT_PROFILES_DIR: ./  # tells dbt where to find profiles.yml
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt
+        run: pip install dbt-postgres  # or dbt-bigquery, dbt-postgres, etc.
+
+      - name: Create profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat <<EOF > ~/.dbt/profiles.yml
+          my_project:
+            target: DEV
+            outputs:
+              dev:
+                type: postgres
+                port: 5432
+                database: postgres
+                schema: dbt_dev
+                threads: 16
+                host: {{ secrets.HOST }}
+                user: {{ secrets.USER }}
+                password: {{ secrets.PASSWORD }}
+                      EOF
+
+      - name: change directory 
+        run: cd ./dbt/dbt_weather
+
+      - name: dbt deps
+        run: dbt deps
+
+      - name: dbt run
+        run: dbt run

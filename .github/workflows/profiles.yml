@@ -11,7 +11,7 @@ jobs:
   dbt-run:
     runs-on: ubuntu-latest
     env:
-      DBT_PROFILES_DIR: ~/.dbt/ # tells dbt where to find profiles.yml
+      DBT_PROFILES_DIR: /home/runner/.dbt/ # tells dbt where to find profiles.yml
 
     steps:
       - uses: actions/checkout@v4
@@ -26,8 +26,8 @@ jobs:
 
       - name: Create profiles.yml
         run: |
-          mkdir -p ~/.dbt
-          cat <<EOF > ~/.dbt/profiles.yml
+          mkdir -p /home/runner/.dbt
+          cat <<EOF > /home/runner/.dbt/profiles.yml
           dbt_weather:
             target: DEV
             outputs:

@@ -43,7 +43,7 @@ jobs:
                       EOF
 
       - name: change directory 
-        run: cd /home/runner/work/OpenMapWeather-ETL/dbt/dbt_weather
+        run: cd /home/runner/work/OpenMapWeather-ETL/OpenMapWeather-ETL/dbt/dbt_weather
 
       - name: dbt deps
         run: dbt deps

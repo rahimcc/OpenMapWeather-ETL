@@ -1,0 +1,283 @@
+==================== 2026-08-18T09:43:51.567236Z | 01a01441-7e02-7042-b4db-11a046361ecc ====================
+09:43:51.569740 [info ]: Installing dbt project and profile setup
+09:43:51.576719 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:43:51.577881 [info ]: Success Project created successfully!
+09:43:51.577916 [info ]: Info Project name: jaffle_shop
+09:43:51.577925 [info ]: Info Project directory: jaffle_shop
+09:43:51.578093 [info ]: Info Setting up your profile...
+09:43:51.582171 [info ]: Loading ~/.dbt/profiles.yml
+09:43:51.603036 [info ]: Profile 'jaffle_shop' already exists. You can choose how to proceed.
+09:44:10.035703 [info ]: Info Profile setup cancelled.
+09:44:10.036842 [info ]: Validating profile inputs, adapters, and connection
+
+09:44:10.038498 [info ]: dbt-fusion 2.0.0-preview.153
+09:44:10.041201 [info ]: Started loading project
+09:44:10.052119 [info ]: Loading ~/.dbt/profiles.yml
+09:44:10.060947 [info ]: Finished loading project [  0.02s]
+09:44:10.061757 [info ]: Started debugging
+09:44:10.061932 [info ]: Debugging profile: dev
+09:44:10.061950 [info ]: Debugging dbt version: 2.0.0-preview.153
+09:44:10.061957 [info ]: Debugging platform: macos aarch64 (unix)
+09:44:10.062146 [info ]: Debugging adapter type: databricks (remote)
+09:44:10.082880 [info ]: Debugging dependencies:
+  git: OK
+09:44:10.084797 [info ]: Debugging connection:
+  "schema": "silver",
+  "host": "dbc-c50c826e-04a0.cloud.databricks.com",
+  "http_path": "/sql/1.0/warehouses/04b2b335f7e9f372"
+09:44:11.804273 [info ]: Finished debugging [  1.74s]
+09:44:11.805418 [error]: dbt1011: dbt was unable to connect to the specified database.
+The following error was returned:
+
+execution error: failed to ping database: databricks: request error: error connecting: host=dbc-c50c826e-04a0.cloud.databricks.com port=443, httpPath=/sql/1.0/warehouses/04b2b335f7e9f372: databricks: request error: open session request error: Post "https://dbc-c50c826e-04a0.cloud.databricks.com:443/sql/1.0/warehouses/04b2b335f7e9f372": Invalid access token.: request error after 1 attempt(s): unexpected HTTP status 403 Forbidden
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+09:44:12.745262 [info ]: New version available 2.0.0-preview.209 (run `dbt system update`)
+09:44:12.823877 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [21.3s]
+==================== 2026-08-18T09:44:33.690547Z | 01a01442-228f-7bf0-93a1-afd19e87736f ====================
+09:44:33.693825 [info ]: Installing dbt project and profile setup
+09:44:33.700256 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:44:33.701485 [info ]: Success Project created successfully!
+09:44:33.701521 [info ]: Info Project name: dbt_weather
+09:44:33.701529 [info ]: Info Project directory: dbt_weather
+09:44:33.701724 [info ]: Info Setting up your profile...
+09:44:33.706777 [info ]: Loading ~/.dbt/profiles.yml
+09:44:33.713181 [info ]: Info Creating new profile...
+09:44:38.256751 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+09:45:58.166651 [info ]: Success Profile written to /Users/rahimsharifov/.dbt/profiles.yml
+09:45:58.167338 [info ]: Validating profile inputs, adapters, and connection
+
+09:45:58.168100 [info ]: dbt-fusion 2.0.0-preview.153
+09:45:58.170673 [info ]: Started loading project
+09:45:58.185741 [info ]: Loading ~/.dbt/profiles.yml
+09:45:58.195691 [info ]: Finished loading project [  0.03s]
+09:45:58.196342 [info ]: Started debugging
+09:45:58.196389 [info ]: Debugging profile: dev
+09:45:58.196406 [info ]: Debugging dbt version: 2.0.0-preview.153
+09:45:58.196415 [info ]: Debugging platform: macos aarch64 (unix)
+09:45:58.196589 [info ]: Debugging adapter type: postgres (remote)
+09:45:58.205924 [info ]: Debugging dependencies:
+  git: OK
+09:45:58.207750 [info ]: Debugging connection:
+  "port": 5432,
+  "database": "postgres",
+  "schema": "dbt_dev",
+  "host": "aws-0-ap-northeast-1.pooler.supabase.com",
+  "user": "postgres.emsqizzjlsqcmorvcwyd"
+==================== 2026-08-18T09:46:13.226919Z | 01a01443-a76a-7cd3-9bcf-d91df1502f31 ====================
+09:46:13.226964 [info ]: Installing dbt project and profile setup
+09:46:13.227025 [info ]: Warning Directory 'dbt_weather' already exists, using 'dbt_weather_1' instead
+09:46:13.232697 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:46:13.232727 [info ]: Success Project created successfully!
+09:46:13.232737 [info ]: Info Project name: dbt_weather_1
+09:46:13.232745 [info ]: Info Project directory: dbt_weather_1
+09:46:13.232752 [info ]: Info Setting up your profile...
+09:46:13.232882 [info ]: Loading ~/.dbt/profiles.yml
+09:46:13.233134 [info ]: Info Creating new profile...
+09:46:15.646136 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+09:46:53.462092 [error]: dbt1001: Failed to get input for database: IO error: read interrupted
+09:46:53.541529 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [40.3s]
+==================== 2026-08-18T09:46:55.107029Z | 01a01444-4b02-7292-aa08-f87592a2aa2d ====================
+09:46:55.107076 [info ]: Installing dbt project and profile setup
+09:46:55.107147 [info ]: Warning Directory 'dbt_weather' already exists, using 'dbt_weather_2' instead
+09:46:55.111448 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:46:55.111497 [info ]: Success Project created successfully!
+09:46:55.111507 [info ]: Info Project name: dbt_weather_2
+09:46:55.111514 [info ]: Info Project directory: dbt_weather_2
+09:46:55.111523 [info ]: Info Setting up your profile...
+09:46:55.111666 [info ]: Loading ~/.dbt/profiles.yml
+09:46:55.111987 [info ]: Info Creating new profile...
+09:46:57.789185 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+09:47:32.229702 [info ]: Success Profile written to /Users/rahimsharifov/.dbt/profiles.yml
+09:47:32.230271 [info ]: Validating profile inputs, adapters, and connection
+
+09:47:32.231230 [info ]: dbt-fusion 2.0.0-preview.153
+09:47:32.234233 [info ]: Started loading project
+09:47:32.248512 [info ]: Loading ~/.dbt/profiles.yml
+09:47:32.260449 [info ]: Finished loading project [  0.03s]
+09:47:32.260906 [info ]: Started debugging
+09:47:32.260955 [info ]: Debugging profile: dev
+09:47:32.260973 [info ]: Debugging dbt version: 2.0.0-preview.153
+09:47:32.260980 [info ]: Debugging platform: macos aarch64 (unix)
+09:47:32.261159 [info ]: Debugging adapter type: postgres (remote)
+09:47:32.271314 [info ]: Debugging dependencies:
+  git: OK
+09:47:32.273415 [info ]: Debugging connection:
+  "port": 5432,
+  "database": "postgres",
+  "schema": "dbt_dev",
+  "host": "aws-0-ap-northeast-1.pooler.supabase.com",
+  "user": "postgres.emsqizzjlsqcmorvcwyd"
+[0m13:51:22.228936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060cea80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cf0ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106de3950>]}
+
+
+============================== 13:51:22.233116 | d841c286-f575-455e-bc27-67b81a860aee ==============================
+[0m13:51:22.233116 [info ] [MainThread]: Running with dbt=1.12.2
+[0m13:51:22.233430 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rahimsharifov/.dbt', 'hints_enabled': 'True', 'warn_error': 'None', 'quiet': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'no_print': 'None', 'empty': 'None', 'partial_parse': 'True', 'printer_width': '80', 'invocation_command': 'dbt init dbt_weather', 'log_format': 'default', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'log_path': 'logs', 'version_check': 'True', 'use_colors': 'True', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False'}
+[0m13:51:22.244039 [info ] [MainThread]: A project called dbt_weather already exists here.
+[0m13:51:22.272886 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.09480788, "process_in_blocks": "0", "process_kernel_time": 0.122163, "process_mem_max_rss": "119111680", "process_out_blocks": "0", "process_user_time": 0.680272}
+[0m13:51:22.273281 [debug] [MainThread]: Command `dbt init` succeeded at 13:51:22.273222 after 0.10 seconds
+[0m13:51:22.273491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10013aba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104275d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e0a060>]}
+[0m13:51:22.273691 [debug] [MainThread]: Flushing usage events
+[0m13:51:23.076403 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-08-18T09:52:34.421356Z | 01a01449-7869-7041-ae5b-87934b242cd0 ====================
+09:52:34.423172 [info ]: Installing dbt project and profile setup
+09:52:34.430424 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:52:34.432038 [info ]: Success Project created successfully!
+09:52:34.432144 [info ]: Info Project name: dbt_weather
+09:52:34.432163 [info ]: Info Project directory: dbt_weather
+09:52:34.432397 [info ]: Info Setting up your profile...
+09:52:34.438265 [info ]: Loading ~/.dbt/profiles.yml
+09:52:34.457463 [info ]: Profile 'dbt_weather' already exists. You can choose how to proceed.
+09:52:41.279218 [info ]: Info Creating new profile...
+09:52:42.380613 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+09:53:03.929822 [info ]: Info Backup created at /Users/rahimsharifov/.dbt/profiles.yml.bkp
+09:53:03.930654 [info ]: Success Profile written to /Users/rahimsharifov/.dbt/profiles.yml
+09:53:03.931701 [info ]: Validating profile inputs, adapters, and connection
+
+09:53:03.932443 [info ]: dbt-fusion 2.0.0-preview.153
+09:53:03.935311 [info ]: Started loading project
+09:53:03.945022 [info ]: Loading ~/.dbt/profiles.yml
+09:53:03.950312 [info ]: Finished loading project [  0.02s]
+09:53:03.951198 [info ]: Started debugging
+09:53:03.951227 [info ]: Debugging profile: dev
+09:53:03.951247 [info ]: Debugging dbt version: 2.0.0-preview.153
+09:53:03.951254 [info ]: Debugging platform: macos aarch64 (unix)
+09:53:03.951479 [info ]: Debugging adapter type: postgres (remote)
+09:53:03.966222 [info ]: Debugging dependencies:
+  git: OK
+09:53:03.967900 [info ]: Debugging connection:
+  "port": 5432,
+  "database": "postgres",
+  "schema": "dbt_dev",
+  "host": "aws-0-ap-northeast-1.pooler.supabase.com",
+  "user": "postgres.emsqizzjlsqcmorvcwyd"
+[0m07:28:41.072262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ea3c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f04bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f04950>]}
+
+
+============================== 07:28:41.075526 | 06ced239-9383-4a2b-ab36-272b0eb543e5 ==============================
+[0m07:28:41.075526 [info ] [MainThread]: Running with dbt=1.12.2
+[0m07:28:41.075852 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'target_path': 'None', 'introspect': 'True', 'printer_width': '80', 'invocation_command': 'dbt init dbt-weather', 'use_experimental_parser': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'no_print': 'None', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'profiles_dir': '/Users/rahimsharifov/.dbt', 'quiet': 'False', 'log_cache_events': 'False', 'warn_error': 'None', 'log_format': 'default', 'static_parser': 'True', 'hints_enabled': 'True', 'maximum_seed_size_mib': '1', 'empty': 'None'}
+[0m07:28:50.441363 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/include/starter_project
+[0m07:28:50.453753 [info ] [MainThread]: Setting up your profile.
+[0m07:29:05.020432 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m07:29:05.029364 [error] [MainThread]: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/main.py", line 504, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/task/init.py", line 363, in run
+    self.setup_profile(profile_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/task/init.py", line 251, in setup_profile
+    if not self.check_if_can_write_profile(profile_name=profile_name):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/task/init.py", line 214, in check_if_can_write_profile
+    response = click.confirm(
+               ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/click/termui.py", line 285, in confirm
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m07:29:05.107449 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 24.081501, "process_in_blocks": "0", "process_kernel_time": 0.122885, "process_mem_max_rss": "130301952", "process_out_blocks": "0", "process_user_time": 1.200567}
+[0m07:29:05.108859 [debug] [MainThread]: Command `dbt init` failed at 07:29:05.108639 after 24.08 seconds
+[0m07:29:05.110297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f19b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e65100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f97890>]}
+[0m07:29:05.111230 [debug] [MainThread]: Flushing usage events
+[0m07:44:59.370272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddfd310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ebe3ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ebe3ad0>]}
+
+
+============================== 07:44:59.373342 | 96d45feb-4994-4e0c-9565-91b9ab733578 ==============================
+[0m07:44:59.373342 [info ] [MainThread]: Running with dbt=1.12.2
+[0m07:44:59.373648 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/rahimsharifov/.dbt', 'target_path': 'None', 'partial_parse': 'True', 'introspect': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'fail_fast': 'False', 'quiet': 'False', 'invocation_command': 'dbt init dbt_weather', 'use_experimental_parser': 'False', 'debug': 'False', 'use_colors': 'True', 'version_check': 'True', 'static_parser': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'log_path': 'logs', 'write_json': 'True', 'warn_error': 'None', 'no_print': 'None'}
+[0m07:44:59.383542 [info ] [MainThread]: A project called dbt_weather already exists here.
+[0m07:44:59.386207 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.06202258, "process_in_blocks": "0", "process_kernel_time": 0.116604, "process_mem_max_rss": "115785728", "process_out_blocks": "0", "process_user_time": 0.673394}
+[0m07:44:59.386525 [debug] [MainThread]: Command `dbt init` succeeded at 07:44:59.386467 after 0.06 seconds
+[0m07:44:59.386725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb68560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea769f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea762d0>]}
+[0m07:44:59.386908 [debug] [MainThread]: Flushing usage events
+[0m07:45:00.262769 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:46:00.479217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109593290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095dfe60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095dfb90>]}
+
+
+============================== 07:46:00.482339 | 0dfa95bd-4e8b-481a-8060-b7662e4e78cd ==============================
+[0m07:46:00.482339 [info ] [MainThread]: Running with dbt=1.12.2
+[0m07:46:00.482644 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init dbt_weather', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'partial_parse': 'True', 'no_print': 'None', 'use_colors': 'True', 'log_cache_events': 'False', 'maximum_seed_size_mib': '1', 'debug': 'False', 'log_path': 'logs', 'target_path': 'None', 'printer_width': '80', 'empty': 'None', 'introspect': 'True', 'version_check': 'True', 'write_json': 'True', 'profiles_dir': '/Users/rahimsharifov/.dbt', 'fail_fast': 'False', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'warn_error': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m07:46:00.492050 [debug] [MainThread]: Starter project path: /Users/rahimsharifov/Documents/Document/OpenMapWeather-ETL/dbt/dbt-env/lib/python3.12/site-packages/dbt/include/starter_project
+[0m07:46:00.495824 [info ] [MainThread]: Setting up your profile.
+[0m07:50:20.860352 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m07:50:20.867684 [info ] [MainThread]: dbt version: 1.12.2
+[0m07:50:20.868300 [info ] [MainThread]: python version: 3.12.10
+[0m07:50:20.868904 [info ] [MainThread]: python path: /Users/rahimsharifov/Documents/Document/OpenMapWeather-ETL/dbt/dbt-env/bin/python3.12
+[0m07:50:20.869459 [info ] [MainThread]: os info: macOS-15.5-arm64-arm-64bit
+[0m07:50:20.947223 [info ] [MainThread]: Using profiles dir at /Users/rahimsharifov/.dbt
+[0m07:50:20.947537 [info ] [MainThread]: Using profiles.yml file at /Users/rahimsharifov/.dbt/profiles.yml
+[0m07:50:20.947678 [info ] [MainThread]: Using dbt_project.yml file at /Users/rahimsharifov/Documents/Document/OpenMapWeather-ETL/dbt/dbt_weather/dbt_project.yml
+[0m07:50:20.948240 [info ] [MainThread]: adapter type: postgres
+[0m07:50:20.948418 [info ] [MainThread]: adapter version: 1.11.0
+[0m07:50:21.005846 [info ] [MainThread]: Configuration:
+[0m07:50:21.006178 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m07:50:21.006340 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m07:50:21.006464 [info ] [MainThread]: Required dependencies:
+[0m07:50:21.006992 [debug] [MainThread]: Executing "git --help"
+[0m07:50:21.033679 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m07:50:21.034452 [debug] [MainThread]: STDERR: "b''"
+[0m07:50:21.034866 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m07:50:21.035029 [info ] [MainThread]: Connection:
+[0m07:50:21.035191 [info ] [MainThread]:   host: aws-0-ap-northeast-1.pooler.supabase.com
+[0m07:50:21.035314 [info ] [MainThread]:   port: 5432
+[0m07:50:21.035425 [info ] [MainThread]:   user: postgres.emsqizzjlsqcmorvcwyd
+[0m07:50:21.035538 [info ] [MainThread]:   database: postgres
+[0m07:50:21.035643 [info ] [MainThread]:   schema: dbt_dev
+[0m07:50:21.035746 [info ] [MainThread]:   connect_timeout: 10
+[0m07:50:21.035849 [info ] [MainThread]:   role: None
+[0m07:50:21.035952 [info ] [MainThread]:   search_path: None
+[0m07:50:21.036054 [info ] [MainThread]:   keepalives_idle: 0
+[0m07:50:21.036158 [info ] [MainThread]:   sslmode: None
+[0m07:50:21.036259 [info ] [MainThread]:   sslcert: None
+[0m07:50:21.036368 [info ] [MainThread]:   sslkey: None
+[0m07:50:21.036472 [info ] [MainThread]:   sslrootcert: None
+[0m07:50:21.036578 [info ] [MainThread]:   application_name: dbt
+[0m07:50:21.036680 [info ] [MainThread]:   autocommit: False
+[0m07:50:21.036782 [info ] [MainThread]:   retries: 1
+[0m07:50:21.037547 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m07:50:21.156681 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m07:50:21.185902 [debug] [MainThread]: Using postgres connection "debug"
+[0m07:50:21.186204 [debug] [MainThread]: On debug: select 1 as id
+[0m07:50:21.186460 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:50:23.897007 [debug] [MainThread]: SQL status: SELECT 1 in 2.709 seconds
+[0m07:50:23.905154 [debug] [MainThread]: On debug: Close
+[0m07:50:23.908693 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m07:50:23.909452 [info ] [MainThread]: [32mAll checks passed![0m
+[0m07:50:23.911232 [info ] [MainThread]: Your new dbt project "dbt_weather" was created!
+Initialized new project in /Users/rahimsharifov/Documents/Document/OpenMapWeather-ETL/dbt/dbt_weather/dbt_weather
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:50:23.917224 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 263.48, "process_in_blocks": "0", "process_kernel_time": 0.296802, "process_mem_max_rss": "113360896", "process_out_blocks": "0", "process_user_time": 0.860021}
+[0m07:50:23.918827 [debug] [MainThread]: Command `dbt init` succeeded at 07:50:23.918540 after 263.48 seconds
+[0m07:50:23.920427 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m07:50:23.921174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10960e1b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095dff50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109593290>]}
+[0m07:50:23.921588 [debug] [MainThread]: Flushing usage events
+[0m07:50:24.886433 [debug] [MainThread]: An error was encountered while trying to flush usage events

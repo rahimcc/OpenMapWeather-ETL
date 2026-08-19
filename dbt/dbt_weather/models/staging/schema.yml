@@ -1,0 +1,19 @@
+version: 2
+
+models:
+ - name: stg_weather_readings
+   columns: 
+    - name: id
+      tests:
+        - unique
+        - not_null
+
+    - name: city
+      tests: 
+        - not_null
+
+    - name: recorded_at
+      tests:
+        - not_null
+
+        

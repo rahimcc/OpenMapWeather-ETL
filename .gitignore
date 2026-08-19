@@ -1,4 +1,4 @@
 .env
 .venv/
-
-dbt/dbt-env/
+dbt/dbt-env
+.secrets

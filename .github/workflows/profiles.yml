@@ -42,9 +42,6 @@ jobs:
                 password: {{ secrets.PASSWORD }}
                       EOF
 
-      - name: change directory 
-        run: cd /home/runner/work/OpenMapWeather-ETL/OpenMapWeather-ETL/dbt/dbt_weather
-
       - name: dbt deps
         working-directory: ./dbt/dbt_weather
         run: dbt deps

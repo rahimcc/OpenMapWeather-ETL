@@ -40,7 +40,7 @@ jobs:
                 host: {{ secrets.HOST }}
                 user: {{ secrets.USER }}
                 password: {{ secrets.PASSWORD }}
-                      EOF
+          EOF
 
       - name: dbt deps
         working-directory: ./dbt/dbt_weather

@@ -11,7 +11,7 @@ jobs:
   dbt-run:
     runs-on: ubuntu-latest
     env:
-      DBT_PROFILES_DIR: ./.dbt/ # tells dbt where to find profiles.yml
+      DBT_PROFILES_DIR: .~/.dbt/ # tells dbt where to find profiles.yml
 
     steps:
       - uses: actions/checkout@v4

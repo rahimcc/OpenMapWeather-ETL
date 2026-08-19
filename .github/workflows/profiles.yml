@@ -37,9 +37,9 @@ jobs:
                 database: postgres
                 schema: dbt_dev
                 threads: 16
-                host: {{ secrets.HOST }}
-                user: {{ secrets.USER }}
-                password: {{ secrets.PASSWORD }}
+                host: ${{ secrets.HOST }}
+                user: ${{ secrets.USER }}
+                password: ${{ secrets.PASSWORD }}
           EOF
 
       - name: dbt deps

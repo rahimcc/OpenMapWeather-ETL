@@ -2,7 +2,7 @@ name: dbt CI
 
 on:
   workflow_run:
-    workflows: ["weather_etl"] # Exact name of the other workflow
+    workflows: ["Weather ETL Pipeline"] # Exact name of the other workflow
     types:
       - completed 
     branches: [main]

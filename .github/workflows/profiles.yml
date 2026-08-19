@@ -46,7 +46,9 @@ jobs:
         run: cd /home/runner/work/OpenMapWeather-ETL/OpenMapWeather-ETL/dbt/dbt_weather
 
       - name: dbt deps
+        working-directory: ./dbt/dbt_weather
         run: dbt deps
 
       - name: dbt run
+        working-directory: : ./dbt/dbt_weather
         run: dbt run

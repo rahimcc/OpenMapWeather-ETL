@@ -42,6 +42,10 @@ jobs:
                 password: ${{ secrets.PASSWORD }}
           EOF
 
+      - name: Debug
+        run: |
+          cat /home/runner/.dbt/profiles.yml
+
       - name: dbt deps
         working-directory: ./dbt/dbt_weather
         run: dbt deps

@@ -25,6 +25,11 @@ jobs:
         run: pip install dbt-postgres  # or dbt-bigquery, dbt-postgres, etc.
 
       - name: Create profiles.yml
+        env:
+          HOST : ${{ secrets.HOST }}
+          USER : ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+
         run: |
           mkdir -p /home/runner/.dbt
           cat <<EOF > /home/runner/.dbt/profiles.yml
@@ -37,9 +42,9 @@ jobs:
                 database: postgres
                 schema: dbt_dev
                 threads: 16
-                host: ${{ secrets.HOST }}
-                user: ${{ secrets.USER }}
-                password: ${{ secrets.PASSWORD }}
+                host: $HOST
+                user: $USER
+                password: $PASSWORD
           EOF
 
       - name: Debug

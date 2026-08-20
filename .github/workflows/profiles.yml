@@ -26,9 +26,9 @@ jobs:
 
       - name: Create profiles.yml
         env:
-          HOST : ${{ secrets.HOST }}
-          USER : ${{ secrets.USER }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          DB_HOST: ${{ secrets.HOST }}
+          DB_USER: ${{ secrets.USER }}
+          DB_PASSWORD: ${{ secrets.PASSWORD }}
 
         run: |
           mkdir -p /home/runner/.dbt
@@ -42,13 +42,17 @@ jobs:
                 database: postgres
                 schema: dbt_dev
                 threads: 16
-                host: $HOST
-                user: $USER
-                password: $PASSWORD
+                host: $DB_HOST
+                user: $DB_USER
+                password: $DB_PASSWORD
           EOF
 
       - name: Debug
         run: |
+          echo Hello
+          echo $DB_HOST
+          echo $DB_USER
+          echo $DB_PASSWORD
           cat /home/runner/.dbt/profiles.yml
 
       - name: dbt deps

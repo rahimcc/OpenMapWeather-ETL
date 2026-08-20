@@ -2,4 +2,4 @@
 .venv/
 dbt/dbt-env
 .secrets
-steamlit_app/str_venv
+streamlit_app/str_venv

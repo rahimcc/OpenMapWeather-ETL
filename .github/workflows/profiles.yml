@@ -10,6 +10,7 @@ on:
 jobs:
   dbt-run:
     runs-on: ubuntu-latest
+    environment: Production
     env:
       DBT_PROFILES_DIR: /home/runner/.dbt/ # tells dbt where to find profiles.yml
 

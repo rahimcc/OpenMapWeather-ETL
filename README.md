@@ -2,7 +2,7 @@
 OpenMapWeather- ETL ( OpenWeatherMap ) is Data Engineering Project that extracts weather data from OpenWeatherMap API and transforms,aggregates data to show current and historical trends of weather in Baku.
 
 ## Architecture
-[Diagram or brief description: OpenWeatherMap API → GitHub Actions → dbt → Fabric → Streamlit]
+![Architecture diagram](Images/architecture.png)
 
 ## Features
 - Automated hourly weather data extraction for Baku
@@ -13,7 +13,7 @@ OpenMapWeather- ETL ( OpenWeatherMap ) is Data Engineering Project that extracts
 - Python, dbt,GitHub Actions, Streamlit, PostgreSQL
 
 ## Live Demo
-[[Link to your Streamlit app](https://openweatherbaku.streamlit.app/)]
+[[OpenWeatherBaku](https://openweatherbaku.streamlit.app/)]
 
 ## Project Structure
 [Brief folder tree explanation]

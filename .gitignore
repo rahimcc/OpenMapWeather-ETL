@@ -3,3 +3,4 @@
 dbt/dbt-env
 .secrets
 streamlit_app/str_venv
+streamlit_app/.streamlit/secrets.toml

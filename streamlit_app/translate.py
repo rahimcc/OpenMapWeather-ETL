@@ -1,0 +1,50 @@
+
+
+
+
+TRANSLATIONS = {
+    "en": {
+        "title": "🌤️ Baku Weather Dashboard",
+        "current_conditions": "Current Conditions",
+        "temperature": "🌡️ Temperature",
+        "humidity": "💧 Humidity",
+        "condition": "Condition",
+        "last_updated": "Last updated",
+        "temp_trend": "Temperature Trend",
+        "humidity_trend": "Humidity Trend",
+        "condition_breakdown": "Weather Condition Frequency",
+        "daily_avg": "Average Temperature by Day",
+        "view_raw": "View raw data",
+        "Clear": "Aydın",
+        "Clouds": "Buludlu",
+        "Rain": "Yağışlı",
+        "Drizzle": "Çiskin",
+        "Thunderstorm": "Tufan",
+        "Snow": "Qar",
+        "Mist": "Duman",
+        "Fog": "Duman",
+        "Haze": "Duman",
+    },
+    "az": {
+        "title": "🌤️ Bakı Hava Məlumatı Paneli",
+        "current_conditions": "Cari Hava Şəraiti",
+        "temperature": "🌡️ Temperatur",
+        "humidity": "💧 Rütubət",
+        "condition": "Vəziyyət",
+        "last_updated": "Son yenilənmə",
+        "temp_trend": "Temperatur Trendi",
+        "humidity_trend": "Rütubət Trendi",
+        "condition_breakdown": "Hava Şəraiti Tezliyi",
+        "daily_avg": "Günlük Orta Temperatur",
+        "view_raw": "Xam məlumatlara bax",
+        "Clear": "Aydın",
+        "Clouds": "Buludlu",
+        "Rain": "Yağışlı",
+        "Drizzle": "Çiskin",
+        "Thunderstorm": "Tufan",
+        "Snow": "Qar",
+        "Mist": "Duman",
+        "Fog": "Duman",
+        "Haze": "Duman",
+    }
+}

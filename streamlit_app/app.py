@@ -2,11 +2,12 @@ import streamlit as st
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
 import datetime
+from zoneinfo import ZoneInfo
 
 
 
 st_autorefresh(interval = 60 * 1000, key = "datarefresh")
-st.caption(f'Last updated: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}')
+st.caption(f'Last updated: {datetime.datetime.now(ZoneInfo('Asia/Baku')).strftime('%Y-%m-%d %H:%M:%S')}')
 
 conn = st.connection("postgresql", type="sql")
 

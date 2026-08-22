@@ -3,6 +3,17 @@ import pandas as pd
 from streamlit_autorefresh import st_autorefresh
 import datetime
 from zoneinfo import ZoneInfo
+from translate import TRANSLATIONS
+
+
+lang = st.sidebar.selectbox(
+            "Language / Dil", 
+            ["en","az"], 
+            format_func = lambda x: "English" if x == "en" else "Azərbaycan" 
+            )
+
+
+t = TRANSLATIONS[lang]
 
 
 
@@ -37,9 +48,8 @@ def load_summary():
     return conn.query(query)
 
 
-st.set_page_config(page_title = "Baku Weather Dashboard", layout="wide")
-st.title("🌤️ Baku Weather Dashboard")
-st.write("Hello — Streamlit is running.")
+st.set_page_config(page_title = t['title'], layout="wide")
+st.title(t['title'])
 
 
 df_current = load_current()
@@ -56,8 +66,8 @@ df_summary['date'] = pd.to_datetime(df_summary['day']).dt.strftime('%Y-%m-%d')
 latest = df_current.iloc[0]
 col1,col2,col3= st.columns(3)
 
-col1.metric("🌡️ Current temperature", f'{latest['temp']}°C')
-col2.metric("💧 Humidity", f'{latest['humidity']}%')
+col1.metric(t['temperature'], f'{latest['temp']}°C')
+col2.metric(t['humidity'], f'{latest['humidity']}%')
 col3.metric("Condition", latest["weather_condition"])
 
 

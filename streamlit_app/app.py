@@ -21,7 +21,7 @@ def load_current():
                 weather_condition
             FROM raw.weather_readings
             ORDER BY recorded_at DESC
-            LIMIT 200 
+            LIMIT 200
         """
     return conn.query(query)
 
@@ -56,8 +56,8 @@ df_summary['date'] = pd.to_datetime(df_summary['day']).dt.strftime('%Y-%m-%d')
 latest = df_current.iloc[0]
 col1,col2,col3= st.columns(3)
 
-col1.metric("Current temperature", f'{latest['temp']}°C')
-col2.metric("Humidity", f'{latest['humidity']}%')
+col1.metric("🌡️ Current temperature", f'{latest['temp']}°C')
+col2.metric("💧 Humidity", f'{latest['humidity']}%')
 col3.metric("Condition", latest["weather_condition"])
 
 
